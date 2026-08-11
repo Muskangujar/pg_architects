@@ -388,58 +388,9 @@ button, input, textarea { font-family: inherit; border: none; outline: none; }
   padding: var(--section-pad);
   background: var(--clr-cream);
 }
-.about-grid {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 80px;
-  margin-top: 48px;
-  align-items: start;
-}
-
-/* Portrait image */
-.portrait-frame {
-  width: 100%;
-  aspect-ratio: 5/7;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 8px 32px rgba(0,0,0,.12);
-}
-.portrait-frame.placeholder {
-  background: var(--clr-dark-green);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-.portrait-frame.placeholder::before {
-  content: '';
-  position: absolute;
-  inset: 8px;
-  border: 2px dashed rgba(255,255,255,.15);
-  border-radius: 8px;
-}
-.portrait-frame.placeholder svg {
-  width: 48px; height: 48px;
-  opacity: .3;
-  fill: var(--clr-white);
-}
-.portrait-frame.placeholder span {
-  font-family: var(--ff-heading);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.35);
-  z-index: 1;
-}
-.portrait-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
+.about-container {
+  max-width: 800px;
+  margin: 48px auto 0;
 }
 
 .about-content h3 {
@@ -906,10 +857,7 @@ button, input, textarea { font-family: inherit; border: none; outline: none; }
    ========================================= */
 @media (max-width: 1024px) {
   .story-grid,
-  .about-grid,
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-grid { grid-template-columns: 1fr; }
-  .portrait-frame { max-width: 320px; }
   .approach-steps { grid-template-columns: 1fr 1fr; }
   .portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 }
@@ -953,7 +901,6 @@ button, input, textarea { font-family: inherit; border: none; outline: none; }
   .footer-left { flex-direction: column; }
   .footer-right { text-align: center; }
   .portfolio-header { flex-direction: column; align-items: flex-start; gap: 20px; }
-  .portrait-frame { max-width: 280px; margin: 0 auto; }
   .hero-bg video {
     height: 100%;
     width: 100%;
